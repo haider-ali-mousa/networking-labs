@@ -1,0 +1,61 @@
+# Enterprise Campus Network
+
+A Cisco Packet Tracer enterprise campus network designed to demonstrate
+VLAN segmentation, Layer 2 redundancy, Layer 3 routing, and network
+availability.
+
+## Technologies
+
+- VLANs
+- Inter-VLAN Routing
+- STP / Rapid PVST+
+- PortFast
+- BPDU Guard
+- EtherChannel
+- OSPF
+- DHCP
+- Multilayer Switching
+- Layer 2 / Layer 3 Design
+
+## VLANs
+
+| VLAN | Network |
+|------|---------|
+| 10 | 192.168.10.0/24 |
+| 20 | 192.168.20.0/24 |
+| 30 | 192.168.30.0/24 |
+| 40 | 192.168.40.0/24 |
+
+## STP Design
+
+The network uses Rapid PVST+ for Layer 2 redundancy.
+
+- Multilayer Switch 0: Root Bridge for VLANs 10 and 30
+- Multilayer Switch 1: Root Bridge for VLAN 20
+- Access switches use PortFast and BPDU Guard on end-device ports.
+
+## Routing
+
+OSPF is configured as the dynamic routing protocol between the
+Layer 3 devices.
+
+The routed links use point-to-point addressing.
+
+## DHCP
+
+A dedicated DHCP server provides IP addressing for the VLANs.
+
+## EtherChannel
+
+EtherChannel is configured between the multilayer switches to provide
+link redundancy and increased bandwidth.
+
+## Topology
+
+![Network Topology](topology.png)
+
+## Project File
+
+The complete Cisco Packet Tracer project is available here:
+
+`enterprise-campus-network.pkt`
